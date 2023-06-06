@@ -1,7 +1,11 @@
+import BodySelectLanguage from "./Body";
+import MyHeader from "./Header";
+
 function MainContainer(){
     return(
-        <div style={{display: "flex"}}>
-            <p>Hello World</p>
+        <div>
+        <MyHeader/>
+        <BodySelectLanguage/>
         </div>
     )
 }
