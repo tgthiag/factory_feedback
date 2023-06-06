@@ -1,5 +1,5 @@
-import imgSrc from './../assets/008_Saint-Gobain.png';
-import imgLogo from './../assets/logo.png';
+import imgSrc from './../../assets/008_Saint-Gobain.png';
+import imgLogo from './../../assets/logo.png';
 
 function MyHeader() {
   return (

@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import React from 'react';
 
-const ImageButton = ({ src, alt }) => {
+const ImageButton = ({ src, alt, onClick }) => {
     const navigate = useNavigate();
     const [isHovered, setIsHovered] = React.useState(false);
   
@@ -13,14 +13,19 @@ const ImageButton = ({ src, alt }) => {
       setIsHovered(false);
     };
   
-    const boxShadow = isHovered ? '0 0 10px 8px rgba(0, 0, 0, 0.5)' : 'none';
-    const transform = isHovered ? 'translateY(-10px)' : 'none';
+    const boxShadow = isHovered ? '0 0 10px 8px rgba(0, 0, 0, 0.6)' : '0 0 10px 8px rgba(0, 0, 0, 0.2)';
+    const transform = isHovered ? 'translateY(-10px)' : 'translateY(-1px)';
   
     const handleClick = () => {
-      // Navigate to another screen
-      console.log("clicked")
-      navigate('/home_page');
+      if (onClick) {
+        onClick();
+      }
     };
+    // const handleClick = () => {
+    //   // Navigate to another screen
+    //   // console.log("clicked")
+    //   // navigate('/home_page');
+    // };
   
     return (
       <img
@@ -36,7 +41,7 @@ const ImageButton = ({ src, alt }) => {
           boxShadow: boxShadow,
           transition: 'box-shadow 0.3s, transform 0.3s',
           transform: transform,
-          margin: 20
+          margin: 15
         }}
       />
     );
