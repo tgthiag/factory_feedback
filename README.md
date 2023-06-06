@@ -1,1 +1,1 @@
-![image](https://github.com/tgthiag/factory_feedback/assets/86815680/49cc66ba-1fd9-49c4-a546-a3a1682b6147)
+![image](https://github.com/tgthiag/factory_feedback/assets/86815680/52b0d5e7-8d91-44f3-86d3-9902f8174b00)
