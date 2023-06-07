@@ -4,19 +4,28 @@ import { initReactI18next } from "react-i18next";
 const resources = {
   en: {
     translation: {
-      "plant": "Plant"
+      "plant": "Plant",
+      "next" : "Next",
+      "lang": "Language",
+      "welcome" : "Welcome"
     }
   },
   //=====================================================================
   pt: {
     translation: {
-      "plant": "Planta de produção"
+      "plant": "Planta de produção",
+      "next" : "Avançar",
+      "lang": "Idioma",
+      "welcome" : "Bem vindo!"
     }
   },
   //=====================================================================
   es: {
     translation: {
-      "plant": "Planta de producción"
+      "plant": "Planta de producción",
+      "next" : "Avance",
+      "lang": "Lenguaje",
+      "welcome" : "¡Bienvenido!"
     }
   }
 };
