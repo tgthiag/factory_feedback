@@ -1,5 +1,5 @@
 import React from 'react';
-import Title from '../items/title';
+import Title from './../components/title';
 
 function HomePage() {
   return (

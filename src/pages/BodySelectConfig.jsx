@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import imgSrc1 from './../../assets/image1.png';
-import imgSrc2 from './../../assets/image2.png';
-import imgSrc3 from './../../assets/image3.png';
-import ImageButtonLangage from '../items/ImageButton';
-import TextButtonPlant from '../items/textButton';
+import imgSrc1 from './../assets/image1.png';
+import imgSrc2 from './../assets/image2.png';
+import imgSrc3 from './../assets/image3.png';
+import ImageButtonLangage from './../components/ImageButton';
+import TextButtonPlant from './../components/textButton';
 import { useTranslation } from 'react-i18next';
-import i18n from '../../services/translation';
+import i18n from './../services/translation';
 
 function BodySelectConfig() {
   const { t } = useTranslation();
