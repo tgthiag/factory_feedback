@@ -6,9 +6,14 @@ import ImageButtonLangage from './../components/ImageButton';
 import TextButtonPlant from './../components/textButton';
 import { useTranslation } from 'react-i18next';
 import i18n from './../services/translation';
+import { Button, ThemeProvider } from '@mui/material';
+import { myTheme } from '../functions/buttonTheme';
+import { useNavigate } from 'react-router-dom';
+import Title from '../components/title';
 
 function BodySelectConfig() {
   const { t } = useTranslation();
+  const navigate = useNavigate();
   const [selectedImage, setSelectedImage] = useState(1);
   const [selectedText, setSelectedText] = useState(null);
   const imageButtons = [
@@ -33,14 +38,21 @@ function BodySelectConfig() {
     setSelectedImage(index);
   };
 
+  const nextPage = () => {
+    console.log("clicked")
+    navigate('/home_page');
+  }
+
   const handleClickText = (index) => {
     console.log(`bt button clicked at index ${index}`);
     setSelectedText(index);
   };
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', height: '50vh', alignItems: 'center' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
       <div>
+      <Title string={t("welcome")}/>
+      {/* <p style={{ color: 'black', fontWeight: "bold" }}>{t('lang')}:</p> */}
         {imageButtons.map((imageButton, index) => (
           <ImageButtonLangage
             select={selectedImage === index ? true : false}
@@ -52,7 +64,7 @@ function BodySelectConfig() {
         ))}
       </div>
 
-      <p style={{ color: 'black' }}>{t('plant')}:</p>
+      <p style={{ color: 'black', fontWeight: "bold" }}>{t('plant')}:</p>
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
         {textButtons.map((item, index) => (
           <TextButtonPlant
@@ -63,6 +75,11 @@ function BodySelectConfig() {
           />
         ))}
       </div>
+      <ThemeProvider theme={myTheme}>
+        <Button sx={{ mt: 5, padding: "2%", borderRadius: 5, fontWeight: "800", fontSize: 18 }} color="secondary" variant="outlined" onClick={nextPage}>
+          {t("next")}
+        </Button>
+      </ThemeProvider>
     </div>
   );
 }
