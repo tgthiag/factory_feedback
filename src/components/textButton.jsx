@@ -27,13 +27,12 @@ const TextButtonPlant = ({ text, onClick, select }) => {
         onMouseLeave={handleMouseLeave}
         onClick={handleClick}
         style={{
-          width: '150px',
-          height: '100px',
+          padding: 20,
           borderRadius: '20px',
           boxShadow: boxShadow,
           transition: 'box-shadow 0.3s, transform 0.3s',
           transform: transform,
-          margin: 15,
+          margin: 10,
           cursor: 'pointer',
           color: 'black',
           display: 'flex',

@@ -33,13 +33,14 @@ const ImageButton = ({ src, alt, onClick, select }) => {
         onMouseLeave={handleMouseLeave}
         onClick={handleClick}
         style={{
-          width: '150px',
-          height: '100px',
+          width: '25%',
+          height: 100,
+          padding: 2,
           borderRadius: "20px",
           boxShadow: boxShadow,
           transition: 'box-shadow 0.3s, transform 0.3s',
           transform: transform ,
-          margin: 15
+          margin: 14
         }}
       />
     );
