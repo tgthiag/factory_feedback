@@ -1,8 +1,6 @@
-import { useNavigate } from 'react-router-dom';
 import React from 'react';
 
-const ImageButton = ({ src, alt, onClick }) => {
-    const navigate = useNavigate();
+const ImageButton = ({ src, alt, onClick, select }) => {
     const [isHovered, setIsHovered] = React.useState(false);
   
     const handleMouseEnter = () => {
@@ -13,8 +11,8 @@ const ImageButton = ({ src, alt, onClick }) => {
       setIsHovered(false);
     };
   
-    const boxShadow = isHovered ? '0 0 10px 8px rgba(0, 0, 0, 0.6)' : '0 0 10px 8px rgba(0, 0, 0, 0.2)';
-    const transform = isHovered ? 'translateY(-10px)' : 'translateY(-1px)';
+    const boxShadow = isHovered || select === true ? '0 0 10px 8px rgba(0, 0, 0, 0.5)' : '0 0 10px 8px rgba(0, 0, 0, 0.2)';
+    const transform = isHovered || select === true ? 'translateY(-6px)' : 'translateY(-1px)';
   
     const handleClick = () => {
       if (onClick) {
@@ -40,7 +38,7 @@ const ImageButton = ({ src, alt, onClick }) => {
           borderRadius: "20px",
           boxShadow: boxShadow,
           transition: 'box-shadow 0.3s, transform 0.3s',
-          transform: transform,
+          transform: transform ,
           margin: 15
         }}
       />

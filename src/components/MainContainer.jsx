@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import MyHeader from './Header';
-import BodySelectLanguage from './BodySelectLanguage';
+import MyHeader from './items/Header';
+import BodySelectConfig from './pages/BodySelectConfig';
 import HomePage from './pages/HomePage';
 
 function MainContainer() {
@@ -10,7 +10,7 @@ function MainContainer() {
       <MyHeader />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<BodySelectLanguage/>} />
+          <Route path="/" element={<BodySelectConfig/>} />
           <Route path="/home_page" element={<HomePage/>} />
         </Routes>
         </BrowserRouter>

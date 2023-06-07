@@ -1,9 +1,10 @@
 import React from 'react';
+import Title from '../items/title';
 
 function HomePage() {
   return (
     <div>
-      <h1>Another Screen</h1>
+      <Title string={"Feedback"}/>
       {/* Add the content for the Another Screen */}
     </div>
   );
