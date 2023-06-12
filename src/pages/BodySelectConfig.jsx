@@ -10,12 +10,15 @@ import { Button, ThemeProvider } from '@mui/material';
 import { myTheme } from '../functions/buttonTheme';
 import { useNavigate } from 'react-router-dom';
 import Title from '../components/title';
+import Popup from '../components/Popup';
 
 function BodySelectConfig() {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const [selectedImage, setSelectedImage] = useState(1);
   const [selectedText, setSelectedText] = useState(null);
+  const [openPopup, setOpenPopup] = useState(false);
+
   const imageButtons = [
     { src: imgSrc1, alt: 'Image 1' },
     { src: imgSrc2, alt: 'Image 2' },
@@ -25,6 +28,14 @@ function BodySelectConfig() {
     { text: "Macedo" },
     { text: "Cumbica" },
   ];
+
+  const handleOpenPopup = (text) => {
+    setOpenPopup(true);
+  };
+
+  const handleClosePopup = () => {
+    setOpenPopup(false);
+  };
 
   const handleClickImage = (index) => {
     console.log(`Image button clicked at index ${index}`);
@@ -43,7 +54,11 @@ function BodySelectConfig() {
       param1: selectedImage,
       param2: selectedText
     };
+    if(selectedText !== null){
     navigate(`/home_page?${new URLSearchParams(params).toString()}`);
+  }else{
+    handleOpenPopup()
+  }
   };
 
   const handleClickText = (index) => {
@@ -66,6 +81,7 @@ function BodySelectConfig() {
           />
         ))}
       </div>
+      <Popup open={openPopup} onClose={handleClosePopup} text={"Please select the Saint-Gobain plant you are visiting now"} />
 
       <p style={{ color: 'black', fontWeight: "bold", fontSize: 24 }}>{t('plant')}:</p>
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>

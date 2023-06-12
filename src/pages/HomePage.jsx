@@ -50,7 +50,9 @@ function HomePage() {
           <div key={index}>
             <p style={{ color: "black", fontWeight: "bold", fontSize: 18 }}>{item.item}</p>
             <div style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center" }}>
+              <p style={{color:"rgba(0, 0, 0, 0.25)", fontSize: 10, fontWeight:"bold", margin:3}}>1</p>
               <RadioButtonGroup onValueChange={(value) => { handleChange({ value, index }) }} sx={{ justifyContent: "center", justifySelf: "center" }} />
+              <p style={{color:"rgba(0, 0, 0, 0.25)", fontSize: 10, fontWeight:"bold", margin:3}}>10</p>
             </div>
           </div>
         ))}

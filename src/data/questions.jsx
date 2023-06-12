@@ -1,11 +1,11 @@
 export const questionsList = [
    {
       "id": 0,
-      "item": "Limpeza e organização (5S)"
+      "item": "Condução da visita"
    },
    {
       "id": 1,
-      "item": "Receptividade e interação"
+      "item": "Limpeza e organização (5S)"
    },
    {
       "id": 2,
@@ -13,7 +13,7 @@ export const questionsList = [
    },
    {
       "id": 3,
-      "item": "Condução da visita"
+      "item": "Receptividade geral e interação"
    },
    {
       "id": 4,
