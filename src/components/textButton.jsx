@@ -22,7 +22,7 @@ const TextButtonPlant = ({ text, onClick, select }) => {
 
   return (
     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-      <h3
+      <h2
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         onClick={handleClick}
@@ -41,7 +41,7 @@ const TextButtonPlant = ({ text, onClick, select }) => {
         }}
       >
         {text}
-      </h3>
+      </h2>
     </div>
   );
 };

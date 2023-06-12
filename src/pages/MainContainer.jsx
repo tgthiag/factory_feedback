@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import MyHeader from './Header';
-import BodySelectConfig from './../pages/BodySelectConfig';
-import HomePage from './../pages/HomePage';
+import MyHeader from '../components/Header';
+import BodySelectConfig from './BodySelectConfig';
+import HomePage from './HomePage';
 
 function MainContainer() {
   return (

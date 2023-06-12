@@ -10,6 +10,7 @@ function Title({string}) {
                 padding: "10px",
                 background: "linear-gradient(45deg, #ffffff, #e0e0e0)",
                 fontWeight: "bold",
+                fontSize: 42,
                 transform: "translateY(-2px)",
             }}>
                 {string}

@@ -7,7 +7,8 @@ const resources = {
       "plant": "Plant",
       "next" : "Next",
       "lang": "Language",
-      "welcome" : "Welcome"
+      "welcome" : "Welcome",
+      "finish" : "Finish"
     }
   },
   //=====================================================================
@@ -16,7 +17,8 @@ const resources = {
       "plant": "Planta de produção",
       "next" : "Avançar",
       "lang": "Idioma",
-      "welcome" : "Bem vindo!"
+      "welcome" : "Bem vindo!",
+      "finish" : "Finalizar",
     }
   },
   //=====================================================================
@@ -25,7 +27,8 @@ const resources = {
       "plant": "Planta de producción",
       "next" : "Avance",
       "lang": "Lenguaje",
-      "welcome" : "¡Bienvenido!"
+      "welcome" : "¡Bienvenido!",
+      "finish" : "Finalizar"
     }
   }
 };

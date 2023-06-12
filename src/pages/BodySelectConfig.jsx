@@ -64,7 +64,7 @@ function BodySelectConfig() {
         ))}
       </div>
 
-      <p style={{ color: 'black', fontWeight: "bold" }}>{t('plant')}:</p>
+      <p style={{ color: 'black', fontWeight: "bold", fontSize: 24 }}>{t('plant')}:</p>
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
         {textButtons.map((item, index) => (
           <TextButtonPlant

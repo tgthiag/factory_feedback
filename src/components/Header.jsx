@@ -10,6 +10,7 @@ function MyHeader() {
         style={{
           width: "100%",
           height: "auto",
+          maxHeight: "20%", 
           boxShadow: "0 0 10px 8px rgba(0, 0, 0, 0.5)",
           filter: "blur(15px)"
         }}
@@ -22,7 +23,7 @@ function MyHeader() {
           top: "50%",
           left: "50%",
           width:"100%",
-          height:"60%",
+          height:"70%",
           transform: "translate(-50%, -50%)"
         }}
       />

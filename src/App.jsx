@@ -1,6 +1,6 @@
 import './App.css';
 import React from 'react';
-import MainContainer from './components/MainContainer';
+import MainContainer from './pages/MainContainer';
 import { createRoot } from 'react-dom/client';
 import i18n from "i18next";
 import { useTranslation, initReactI18next } from "react-i18next";
