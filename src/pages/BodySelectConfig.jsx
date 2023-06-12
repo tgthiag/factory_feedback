@@ -39,9 +39,12 @@ function BodySelectConfig() {
   };
 
   const nextPage = () => {
-    console.log("clicked")
-    navigate('/home_page');
-  }
+    const params = {
+      param1: selectedImage,
+      param2: selectedText
+    };
+    navigate(`/home_page?${new URLSearchParams(params).toString()}`);
+  };
 
   const handleClickText = (index) => {
     console.log(`bt button clicked at index ${index}`);
