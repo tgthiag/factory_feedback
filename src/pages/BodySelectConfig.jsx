@@ -33,7 +33,7 @@ function BodySelectConfig() {
   const businessButtons = [
     { text: "Saint-Gobain\nAbrasivos", key: "sga" },
     { text: "Visitante\nExterno", key: "externo" },
-    { text: "Saint-Gobain\nOutros Negócios", key:"sg" },
+    { text: "Saint-Gobain\nOutros Negócios", key: "sg" },
   ];
 
   const handleOpenPopup = (text) => {
@@ -59,13 +59,14 @@ function BodySelectConfig() {
   const nextPage = () => {
     const params = {
       param1: selectedImage,
-      param2: selectedText
+      param2: selectedText,
+      param3: selectedBusiness,
     };
-    if(selectedText !== null){
-    navigate(`/home_page?${new URLSearchParams(params).toString()}`);
-  }else{
-    handleOpenPopup()
-  }
+    if (selectedText !== null && selectedBusiness !== null) {
+      navigate(`/home_page?${new URLSearchParams(params).toString()}`);
+    } else {
+      handleOpenPopup()
+    }
   };
 
   const handleClickText = (index) => {
@@ -80,8 +81,8 @@ function BodySelectConfig() {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
       <div>
-      <Title string={t("welcome")}/>
-      {/* <p style={{ color: 'black', fontWeight: "bold" }}>{t('lang')}:</p> */}
+        <Title string={t("welcome")} />
+        {/* <p style={{ color: 'black', fontWeight: "bold" }}>{t('lang')}:</p> */}
         {imageButtons.map((imageButton, index) => (
           <ImageButtonLangage
             select={selectedImage === index ? true : false}
@@ -92,7 +93,7 @@ function BodySelectConfig() {
           />
         ))}
       </div>
-      <Popup open={openPopup} onClose={handleClosePopup} text={"Please select the Saint-Gobain plant you are visiting now"} />
+      <Popup open={openPopup} onClose={handleClosePopup} text={"Please select the options."} />
 
       <p style={{ color: 'black', fontWeight: "bold", fontSize: 24 }}>{t('plant')}:</p>
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
@@ -106,8 +107,8 @@ function BodySelectConfig() {
         ))}
       </div>
       <p style={{ color: 'black', fontWeight: "bold", fontSize: 24 }}>A qual negócio você pertence?</p>
-      <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', whiteSpace: "pre-line"}}>
-            {businessButtons.map((item, index) => (
+      <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', whiteSpace: "pre-line" }}>
+        {businessButtons.map((item, index) => (
           <TextButtonPlant
             select={selectedBusiness === businessButtons[index].key ? true : false}
             key={index}

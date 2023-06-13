@@ -21,6 +21,7 @@ function HomePage() {
   const searchParams = new URLSearchParams(location.search);
   const idioma = searchParams.get('param1');
   const plant = searchParams.get('param2');
+  const business = searchParams.get('param3');
   const database = getDatabase();
 
   const handleChange = ({ value, index }) => {
@@ -39,7 +40,7 @@ function HomePage() {
     }
     const planta = plant === "0" ? "macedo" : "cumbica";
     const databaseRef = ref(database, `feedback/${planta}/${getYear()}/${getMonth()}`); //0 = Macedo, 1 = cumbica
-    const itensToSubmit = new DataQuestions(...checklistValues, comment, date, planta, idioma);
+    const itensToSubmit = new DataQuestions(...checklistValues, comment, date, planta, idioma, business);
 
     push(databaseRef, itensToSubmit)
       .then((newRef) => {
