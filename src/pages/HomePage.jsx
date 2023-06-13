@@ -5,8 +5,11 @@ import { questionsList } from '../data/questions';
 import { Button, TextField } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import DataQuestions from '../data/DataQuestions';
-import getDate from "../functions/getDate";
+import {getDate, yearMonth, getYear, getMonth} from "../functions/getDate";
 import { useLocation } from 'react-router-dom';
+import firebaseApp from '../services/firebaseRealtimeDb';
+import { getDatabase, ref, set, push } from "firebase/database";
+import { useNavigate } from 'react-router-dom';
 
 
 function HomePage() {
@@ -14,9 +17,11 @@ function HomePage() {
   const [checklistValues, setCheckValues] = useState([]);
   const [comment, setComment] = useState('');
   const location = useLocation();
+  const navigate = useNavigate();
   const searchParams = new URLSearchParams(location.search);
   const idioma = searchParams.get('param1');
-  const planta = searchParams.get('param2');
+  const plant = searchParams.get('param2');
+  const database = getDatabase();
 
   const handleChange = ({ value, index }) => {
     setCheckValues(prevChecklistValues => {
@@ -28,14 +33,22 @@ function HomePage() {
 
   const submitData = () => {
     const date = getDate()
-    console.log(comment);
-
     if (checklistValues.length !== 5) {
       console.log('Por favor, selecione todas as opções..');
       return;
     }
+    const planta = plant === "0" ? "macedo" : "cumbica";
+    const databaseRef = ref(database, `feedback/${planta}/${getYear()}/${getMonth()}`); //0 = Macedo, 1 = cumbica
     const itensToSubmit = new DataQuestions(...checklistValues, comment, date, planta, idioma);
-    console.log(itensToSubmit);
+
+    push(databaseRef, itensToSubmit)
+      .then((newRef) => {
+        const newId = newRef.key;
+        navigate(`/thanks`);
+      })
+      .catch((error) => {
+        console.error("Error writing to Firebase: ", error);
+      });
   };
 
   const handleCommentChange = (event) => {
