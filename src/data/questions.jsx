@@ -5,7 +5,7 @@ export const questionsList = [
    },
    {
       "id": 1,
-      "item": "Limpeza e organização (5S)"
+      "item": "Planejamento e agendamento da visita"
    },
    {
       "id": 2,
@@ -13,7 +13,7 @@ export const questionsList = [
    },
    {
       "id": 3,
-      "item": "Receptividade geral e interação"
+      "item": "Limpeza e organização (5S)"
    },
    {
       "id": 4,
