@@ -17,6 +17,7 @@ function BodySelectConfig() {
   const navigate = useNavigate();
   const [selectedImage, setSelectedImage] = useState(1);
   const [selectedText, setSelectedText] = useState(null);
+  const [selectedBusiness, setSelectedBusiness] = useState(null);
   const [openPopup, setOpenPopup] = useState(false);
 
   const imageButtons = [
@@ -27,6 +28,12 @@ function BodySelectConfig() {
   const textButtons = [
     { text: "Macedo" },
     { text: "Cumbica" },
+  ];
+
+  const businessButtons = [
+    { text: "Saint-Gobain\nAbrasivos", key: "sga" },
+    { text: "Visitante\nExterno", key: "externo" },
+    { text: "Saint-Gobain\nOutros Negócios", key:"sg" },
   ];
 
   const handleOpenPopup = (text) => {
@@ -65,6 +72,10 @@ function BodySelectConfig() {
     console.log(`bt button clicked at index ${index}`);
     setSelectedText(index);
   };
+  const handleClickBusiness = (index) => {
+    console.log(`business button clicked at index ${index}`);
+    setSelectedBusiness(index);
+  };
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
@@ -91,6 +102,17 @@ function BodySelectConfig() {
             key={index}
             text={item.text}
             onClick={() => handleClickText(index)}
+          />
+        ))}
+      </div>
+      <p style={{ color: 'black', fontWeight: "bold", fontSize: 24 }}>A qual negócio você pertence?</p>
+      <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', whiteSpace: "pre-line"}}>
+            {businessButtons.map((item, index) => (
+          <TextButtonPlant
+            select={selectedBusiness === businessButtons[index].key ? true : false}
+            key={index}
+            text={item.text}
+            onClick={() => handleClickBusiness(businessButtons[index].key)}
           />
         ))}
       </div>

@@ -1,5 +1,5 @@
 class DataQuestions {
-    constructor(value1, value2, value3, value4, value5, stringValue, date, plant, language) {
+    constructor(value1, value2, value3, value4, value5, stringValue, date, plant, language, business) {
       this.value1 = value1;
       this.value2 = value2;
       this.value3 = value3;
@@ -9,6 +9,7 @@ class DataQuestions {
       this.date = date;
       this.plant = plant;
       this.lang = language;
+      this.business = business
     }
   }
   
