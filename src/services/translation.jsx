@@ -8,7 +8,18 @@ const resources = {
       "next" : "Next",
       "lang": "Language",
       "welcome" : "Welcome",
-      "finish" : "Finish"
+      "finish" : "Finish",
+      "wich_business": "Which business do you belong to?",
+      "sga": "Saint-Gobain\nAbrasives",
+      "sg": "Saint-Gobain\n(Other Businesses)",
+      "external": "External\nVisitor",
+      "qt1": "Visit planning and scheduling",
+      "qt2": "Leading of visit",
+      "qt3": "About safety",
+      "qt4": "Cleaning and organization (5S)",
+      "qt5":"How do we rank among the other factories you are familiar with?",
+      "comments": "Comments:",
+
     }
   },
   //=====================================================================
@@ -19,6 +30,16 @@ const resources = {
       "lang": "Idioma",
       "welcome" : "Bem vindo!",
       "finish" : "Finalizar",
+      "wich_business": "A qual negócio você pertence?",
+      "sga": "Saint-Gobain\nAbrasivos",
+      "sg": "Saint-Gobain\n(Outros Negócios)",
+      "external": "Visitante\nExterno",
+      "qt1": "Planejamento e agendamento da visita",
+      "qt2": "Condução da visita",
+      "qt3": "Segurança",
+      "qt4": "Cleaning and organization (5S)",
+      "qt5":"Como estamos em relação às outras fábricas que você conhece?",
+      "comments": "Comentários:",
     }
   },
   //=====================================================================
@@ -28,7 +49,17 @@ const resources = {
       "next" : "Avance",
       "lang": "Lenguaje",
       "welcome" : "¡Bienvenido!",
-      "finish" : "Finalizar"
+      "finish" : "Finalizar",
+      "wich_business": "¿A qué negocio pertenece?",
+      "sga": "Saint-Gobain\nAbrasivos",
+      "sg" : "Saint-Gobain\n(Otros negocios)",
+      "external": "Visitante\nExterno",
+      "qt1": "Planificación y programación de la visita",
+      "qt2": "Conducción de la visita",
+      "qt3": "Seguridad",
+      "qt4": "Limpieza y organizacion (5S)",
+      "qt5":"¿Cómo estamos en relación con las otras fábricas que conoces?",
+      "comments": "Comentarios:",
     }
   }
 };

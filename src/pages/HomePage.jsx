@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Title from '../components/title';
 import RadioButtonGroup from '../components/Radiogroup';
-import { questionsList } from '../data/questions';
 import { Button, TextField } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import DataQuestions from '../data/DataQuestions';
@@ -10,6 +9,7 @@ import { useLocation } from 'react-router-dom';
 import firebaseApp from '../services/firebaseRealtimeDb';
 import { getDatabase, ref, set, push } from "firebase/database";
 import { useNavigate } from 'react-router-dom';
+import QuestionsList from '../data/questions';
 
 
 function HomePage() {
@@ -23,6 +23,7 @@ function HomePage() {
   const plant = searchParams.get('param2');
   const business = searchParams.get('param3');
   const database = getDatabase();
+  const questionsList = QuestionsList()
 
   const handleChange = ({ value, index }) => {
     setCheckValues(prevChecklistValues => {
@@ -72,7 +73,7 @@ function HomePage() {
         ))}
       </div>
 
-      <p style={{ color: "black", fontWeight: "bold", fontSize: 24, marginTop: 25 }}>{"Comentários:"}</p>
+      <p style={{ color: "black", fontWeight: "bold", fontSize: 24, marginTop: 25 }}>{t("comments")}</p>
       <div style={{ display: "flex", flexDirection: "column", width: "50%", justifyContent: "center", margin: "auto" }}>
         <TextField multiline value={comment} onChange={handleCommentChange} />
         <Button sx={{ mt: 2 }} color="secondary" variant="outlined" onClick={submitData}>

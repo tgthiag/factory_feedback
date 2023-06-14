@@ -31,9 +31,9 @@ function BodySelectConfig() {
   ];
 
   const businessButtons = [
-    { text: "Saint-Gobain\nAbrasivos", key: "sga" },
-    { text: "Visitante\nExterno", key: "externo" },
-    { text: "Saint-Gobain\nOutros Negócios", key: "sg" },
+    { text: t("sga"), key: "sga" },
+    { text: t("external"), key: "externo" },
+    { text: t("sg"), key: "sg" },
   ];
 
   const handleOpenPopup = (text) => {
@@ -106,7 +106,7 @@ function BodySelectConfig() {
           />
         ))}
       </div>
-      <p style={{ color: 'black', fontWeight: "bold", fontSize: 24 }}>A qual negócio você pertence?</p>
+      <p style={{ color: 'black', fontWeight: "bold", fontSize: 24 }}>{t("wich_business")}</p>
       <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', whiteSpace: "pre-line" }}>
         {businessButtons.map((item, index) => (
           <TextButtonPlant
