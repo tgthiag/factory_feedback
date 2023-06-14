@@ -1,10 +1,12 @@
 import Title from "../components/title";
+import { useTranslation } from "react-i18next";
 
 function CongratsPage(){
+    const {t} = useTranslation();
     return(
         <div>
-            <Title string={"Agradecemos!"}/>
-            <p style={{ color: "black", fontWeight: "bold", fontSize: 18 }}>Sua opnião nos ajuda a evoluir cada vez mais!</p>
+            <Title string={t('thanks')}/>
+            <p style={{ color: "black", fontWeight: "bold", fontSize: 18 }}>{t('thanks2')}</p>
         </div>
     )
 };

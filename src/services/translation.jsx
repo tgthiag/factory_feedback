@@ -19,6 +19,8 @@ const resources = {
       "qt4": "Cleaning and organization (5S)",
       "qt5":"How do we rank among the other factories you are familiar with?",
       "comments": "Comments:",
+      "thanks": "Thank you!",
+      "thanks2": "We are thankful for your input, as it fuels our continuous improvement!",
 
     }
   },
@@ -37,9 +39,11 @@ const resources = {
       "qt1": "Planejamento e agendamento da visita",
       "qt2": "Condução da visita",
       "qt3": "Segurança",
-      "qt4": "Cleaning and organization (5S)",
+      "qt4": "Limpeza e organização (5S)",
       "qt5":"Como estamos em relação às outras fábricas que você conhece?",
       "comments": "Comentários:",
+      "thanks": "Agradecemos!",
+      "thanks2": "Sua opnião nos ajuda a evoluir cada vez mais!"
     }
   },
   //=====================================================================
@@ -59,7 +63,9 @@ const resources = {
       "qt3": "Seguridad",
       "qt4": "Limpieza y organizacion (5S)",
       "qt5":"¿Cómo estamos en relación con las otras fábricas que conoces?",
-      "comments": "Comentarios:",
+      "comments": "Comentarios:", 
+      "thanks": "¡Gracias!",
+      "thanks2": "¡Tu opinión nos ayuda a mejorar cada vez más!"
     }
   }
 };
