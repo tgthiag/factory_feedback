@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import imgSrc1 from './../assets/image1.png';
 import imgSrc2 from './../assets/image2.png';
 import imgSrc3 from './../assets/image3.png';
@@ -11,6 +11,8 @@ import { myTheme } from '../functions/buttonTheme';
 import { useNavigate } from 'react-router-dom';
 import Title from '../components/title';
 import Popup from '../components/Popup';
+import {auth} from '../services/firebaseRealtimeDb';
+import { signInAnonymously } from 'firebase/auth';
 
 function BodySelectConfig() {
   const { t } = useTranslation();
@@ -19,7 +21,6 @@ function BodySelectConfig() {
   const [selectedText, setSelectedText] = useState(null);
   const [selectedBusiness, setSelectedBusiness] = useState(null);
   const [openPopup, setOpenPopup] = useState(false);
-
   const imageButtons = [
     { src: imgSrc1, alt: 'Image 1' },
     { src: imgSrc2, alt: 'Image 2' },
@@ -29,12 +30,15 @@ function BodySelectConfig() {
     { text: "Macedo" },
     { text: "Cumbica" },
   ];
-
   const businessButtons = [
     { text: t("sga"), key: "sga" },
     { text: t("external"), key: "externo" },
     { text: t("sg"), key: "sg" },
   ];
+
+  useEffect(()=> {
+    signInAnonymously(auth).then((Credential) => console.log(Credential))
+  },[])
 
   const handleOpenPopup = (text) => {
     setOpenPopup(true);
