@@ -37,7 +37,7 @@ function BodySelectConfig() {
   ];
 
   useEffect(()=> {
-    signInAnonymously(auth).then((Credential) => console.log(Credential))
+    signInAnonymously(auth).then((Credential) => console.log("User authenticated"))
   },[])
 
   const handleOpenPopup = (text) => {
@@ -49,7 +49,7 @@ function BodySelectConfig() {
   };
 
   const handleClickImage = (index) => {
-    console.log(`Image button clicked at index ${index}`);
+    // console.log(`Image button clicked at index ${index}`);
     if (index === 0) {
       i18n.changeLanguage('pt');
     } else if (index === 1) {
@@ -74,11 +74,11 @@ function BodySelectConfig() {
   };
 
   const handleClickText = (index) => {
-    console.log(`bt button clicked at index ${index}`);
+    // console.log(`bt button clicked at index ${index}`);
     setSelectedText(index);
   };
   const handleClickBusiness = (index) => {
-    console.log(`business button clicked at index ${index}`);
+    // console.log(`business button clicked at index ${index}`);
     setSelectedBusiness(index);
   };
 
