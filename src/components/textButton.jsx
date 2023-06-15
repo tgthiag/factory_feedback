@@ -27,7 +27,7 @@ const TextButtonPlant = ({ text, onClick, select }) => {
         onMouseLeave={handleMouseLeave}
         onClick={handleClick}
         style={{
-          padding: 20,
+          padding: 15,
           borderRadius: '20px',
           boxShadow: boxShadow,
           transition: 'box-shadow 0.3s, transform 0.3s',

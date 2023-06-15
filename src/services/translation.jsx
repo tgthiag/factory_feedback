@@ -27,7 +27,7 @@ const resources = {
   //=====================================================================
   pt: {
     translation: {
-      "plant": "Planta de produção",
+      "plant": "Planta",
       "next" : "Avançar",
       "lang": "Idioma",
       "welcome" : "Bem vindo!",
@@ -49,7 +49,7 @@ const resources = {
   //=====================================================================
   es: {
     translation: {
-      "plant": "Planta de producción",
+      "plant": "Planta",
       "next" : "Avance",
       "lang": "Lenguaje",
       "welcome" : "¡Bienvenido!",

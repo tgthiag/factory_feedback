@@ -13,6 +13,7 @@ import Title from '../components/title';
 import Popup from '../components/Popup';
 import {auth} from '../services/firebaseRealtimeDb';
 import { signInAnonymously } from 'firebase/auth';
+import BusinessButtons from '../components/businessButtons';
 
 function BodySelectConfig() {
   const { t } = useTranslation();
@@ -99,7 +100,7 @@ function BodySelectConfig() {
       </div>
       <Popup open={openPopup} onClose={handleClosePopup} text={"Please select the options."} />
 
-      <p style={{ color: 'black', fontWeight: "bold", fontSize: 24 }}>{t('plant')}:</p>
+      <p style={{ color: 'black', fontWeight: "bold", fontSize: 18 }}>{t('plant')}:</p>
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
         {textButtons.map((item, index) => (
           <TextButtonPlant
@@ -110,10 +111,10 @@ function BodySelectConfig() {
           />
         ))}
       </div>
-      <p style={{ color: 'black', fontWeight: "bold", fontSize: 24 }}>{t("wich_business")}</p>
+      <p style={{ color: 'black', fontWeight: "bold", fontSize: 18 }}>{t("wich_business")}</p>
       <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', whiteSpace: "pre-line" }}>
         {businessButtons.map((item, index) => (
-          <TextButtonPlant
+          <BusinessButtons
             select={selectedBusiness === businessButtons[index].key ? true : false}
             key={index}
             text={item.text}

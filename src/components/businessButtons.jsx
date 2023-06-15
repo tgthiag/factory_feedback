@@ -22,26 +22,27 @@ const BusinessButtons = ({ text, onClick, select }) => {
 
   return (
     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-      <h2
+      <h4
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         onClick={handleClick}
         style={{
-          padding: 20,
+          padding: 12,
           borderRadius: '20px',
           boxShadow: boxShadow,
           transition: 'box-shadow 0.3s, transform 0.3s',
           transform: transform,
-          margin: 10,
+          margin: 5,
           cursor: 'pointer',
           color: 'black',
           display: 'flex',
           justifyContent: 'center',
+          fontSize:10,        
           alignItems: 'center', // Aligns text vertically
         }}
       >
         {text}
-      </h2>
+      </h4>
     </div>
   );
 };
